@@ -55,13 +55,16 @@ void prims(int graph[V][V])
 
 int main()
 {
-    int graph[V][V]={
-        {0,2,0,6,0},
-        {2,0,3,8,5},
-        {0,3,0,0,7},
-        {6,8,0,0,9},
-        {0,5,7,9,0}
-    };
+    int graph[V][V];
+
+    printf("Enter the adjacency matrix (%d x %d):\n", V, V);
+    for (int i = 0; i < V; i++)
+    {
+        for (int j = 0; j < V; j++)
+        {
+            scanf("%d", &graph[i][j]);
+        }
+    }
 
     prims(graph);
     return 0;
